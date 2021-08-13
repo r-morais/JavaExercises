@@ -8,18 +8,18 @@ Bonus: Can you do this in one pass?*/
 
 class Problem1 {
 
-    private boolean exec(ArrayList<Integer> list, int num) {
+    private boolean exec(int[] list, int num) {
 
         HashSet<Integer> values = new HashSet<Integer>();
 
-        for (int i = 0; i < list.size(); i++) {
-           
-            int calc = num - list.get(i).intValue();
+        for (int i = 0; i < list.length; i++) {
+
+            int calc = num - list[i];
             if (values.contains(calc)) {
-                System.out.println(list.get(i) + " + " + calc + " = " + num);
+                System.out.println(list[i] + " + " + calc + " = " + num);
                 return true;
             }
-            values.add(list.get(i));
+            values.add(list[i]);
         }
 
         return false;
@@ -28,13 +28,7 @@ class Problem1 {
     public static void main(String[] args) {
         Problem1 p = new Problem1();
 
-        ArrayList<Integer> arraylist = new ArrayList<>();
-        arraylist.add(10);
-        arraylist.add(15);
-        arraylist.add(3);
-        arraylist.add(7);
-
-        System.out.println(p.exec(arraylist, 17));
+        System.out.println(p.exec(new int[] { 10, 15, 3, 7 }, 17));
     }
 
 }
