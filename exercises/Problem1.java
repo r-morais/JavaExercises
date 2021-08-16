@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+package exercises;
+
 import java.util.HashSet;
 
 /*This problem was recently asked by Google.
@@ -27,7 +28,6 @@ class Problem1 {
 
     public static void main(String[] args) {
         Problem1 p = new Problem1();
-
         System.out.println(p.exec(new int[] { 10, 15, 3, 7 }, 17));
     }
 
